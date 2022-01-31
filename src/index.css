@@ -1,0 +1,178 @@
+:root {
+  --bg-dark: #2e3440;
+  --bg-light: #fdebf7;
+  --text-white: #fff;
+  --text-dark: #000;
+  --placeholder-light: rgba(255, 255, 255, 0.65);
+  --placeholder-dark: rgba(0, 0, 0, 0.65);
+  margin: 1rem;
+  font-size: 16px;
+  border-radius: 10px;
+  text-overflow: ellipsis;
+  overflow: scroll;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--text-dark);
+}
+
+.apps {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.feedback {
+  font-weight: bold;
+}
+.bad-feedback {
+  color: #ff4848;
+}
+
+.app-card {
+  display: flex;
+  background-color: var(--bg-light);
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: 0.5rem;
+  padding: 0.75rem;
+}
+.app-card > h3 {
+  margin-right: 10px;
+}
+.app-card:focus {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+}
+
+.text-box {
+  border: none;
+  padding: 1rem;
+  margin: 0.5rem;
+  background-color: var(--bg-light);
+  outline: none;
+  color: var(--text-dark);
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  font-size: 1rem;
+}
+.text-box::placeholder {
+  color: var(--placeholder-dark);
+}
+.text-box:focus {
+  box-shadow: rgba(40, 255, 191, 1) 0px 1px 4px,
+    rgba(40, 255, 191, 1) 0px 0px 0px 3px;
+}
+
+.btn {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin: 0.5rem;
+  font-size: 1rem;
+  color: var(--text-dark);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background: transparent;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.btn:focus {
+  box-shadow: rgba(40, 255, 191, 1) 0px 1px 4px,
+    rgba(40, 255, 191, 1) 0px 0px 0px 3px;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.header > h3 {
+  margin: 0rem;
+}
+.header-with-back {
+  justify-content: start;
+}
+.header-with-back > button {
+  margin-left: 5px;
+  margin-right: 15px;
+}
+
+.icon-btn {
+  padding: 0rem;
+}
+
+.password {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  text-align: center;
+}
+
+.pass-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.show-btn {
+  color: var(--text-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: none;
+  padding: 0.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+  }
+  .show-btn{
+    color: var(--text-white);
+  }
+  .btn {
+    color: var(--text-white);
+  }
+  .text-box {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+  }
+  .text-box::placeholder {
+    color: var(--placeholder-light);
+  }
+  a {
+    color: var(--text-white);
+  }
+  .app-card {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+  }
+}
